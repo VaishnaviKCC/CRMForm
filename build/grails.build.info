@@ -1,0 +1,6 @@
+#Wed, 25 May 2016 18:07:35 +0530
+
+info.app.version=0.1
+info.app.name=Crm
+grails.env=production
+info.app.grailsVersion=3.1.7
