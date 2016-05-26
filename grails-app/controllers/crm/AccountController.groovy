@@ -13,7 +13,7 @@ class AccountController {
     def index() {
     }
     @Secured(['ROLE_ROYALTY'])
-    def mylink(Integer max) {
+    def admini(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Account.list(params), model:[accountCount: Account.count()]
     }
@@ -50,11 +50,11 @@ class AccountController {
             '*' { respond account, [status: CREATED] }
         }
     }
-    
+    @Secured(['ROLE_ROYALTY'])
     def edit(Account account) {
         respond account
     }
-    @Secured(['IS_AUTHENTICATED_ANONYMOUSLY'])
+    @Secured(['ROLE_ROYALTY'])
     @Transactional
     def update(Account account) {
         if (account == null) {
@@ -79,7 +79,7 @@ class AccountController {
             '*'{ respond account, [status: OK] }
         }
     }
-
+    @Secured(['ROLE_ROYALTY'])
     @Transactional
     def delete(Account account) {
 

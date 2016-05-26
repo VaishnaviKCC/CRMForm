@@ -15,6 +15,9 @@
                 </li>
             </ul>
         </div>-->
+        <ul>
+        	 <li><a href="${createLink(action: 'create')}"> <b>New Account </b> </a>
+        </ul>
         <div id="list-account" class="content scaffold-list" role="main">
             <h1><g:message code="default.list.label" args="[entityName]" /></h1>
             <g:if test="${flash.message}">
