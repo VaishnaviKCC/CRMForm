@@ -5,7 +5,7 @@ Admin can see all the accounts created.
 
 ## How to run
 1. git clone the project
-2. cd into the directory of project
+2. cd directory containing the project
 3. run : grails run-app
 4. open into the browser localhost:8080/account
 
